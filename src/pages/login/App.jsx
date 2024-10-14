@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import "./index.scss";
+import "./App.scss";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-export default function AdicionarUsuario() {
+export default function Login() {
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
   
@@ -23,7 +23,7 @@ export default function AdicionarUsuario() {
       alert(resp.data.erro)
     } else {
       localStorage.setItem("USUARIO", resp.data.token)
-      navigate("/adicionarCanal")
+      navigate("/diario")
     }
   }
 
@@ -43,7 +43,7 @@ export default function AdicionarUsuario() {
 
   return (
     <div className="pagina-adicionar-usuario">
-      <h1>LOGIN USUARIO</h1>
+      <h1>Seja bem vindo ao seu diário</h1>
 
       <div className="form">
         <div>

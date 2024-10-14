@@ -1,10 +1,14 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import AdicionarUsuario from "./pages/login/App";
+import Login from "./pages/login/App";
+import Diario from "./pages/diario";
+import ConsultarDiario from "./pages/verDiario";
 export default function Navegacao() {
   return (
     <BrowserRouter>
         <Routes>
-          <Route path="/" element={ <AdicionarUsuario/> } />         
+          <Route path="/" element={ <Login/> } />         
+          <Route path="/diario" element={ <Diario/> } />         
+          <Route path="/diarioBuscar" element={ <ConsultarDiario/> } />         
         </Routes>
     </BrowserRouter>
   )
