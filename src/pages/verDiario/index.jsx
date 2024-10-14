@@ -51,8 +51,8 @@ export default function ConsultarDiario() {
           {diario.map((item) => (
             <tr>
               <td>{item.idDiario}</td>
-              <td>{item.dia}</td>
-              <td>{item.conteudo}</td>
+              <td>{item.dtDia}</td>
+              <td>{item.dsConteudo}</td>
               <td> <Link to={'/diario/' + item.idDiario} className="alterar-link"> Alterar </Link> </td>
             </tr>
           ))}

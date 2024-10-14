@@ -8,6 +8,7 @@ export default function Navegacao() {
         <Routes>
           <Route path="/" element={ <Login/> } />         
           <Route path="/diario" element={ <Diario/> } />         
+          <Route path="/diario/:id" element={ <Diario/> } />         
           <Route path="/diarioBuscar" element={ <ConsultarDiario/> } />         
         </Routes>
     </BrowserRouter>
